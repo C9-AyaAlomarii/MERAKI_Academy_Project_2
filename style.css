@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    text-align: center;
+}
+
+
+#main-page{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 6fr 1fr ;
+    grid-template-areas: "header header" "main main" "footer footer";
+
+}
+#header{ background-color: blanchedalmond;
+grid-area: header;
+}
+#main{ background-color: rgb(200, 173, 132);
+    grid-area: main;
+    display: grid;
+    text-align: center;
+  grid-template-columns:  1fr 1fr 1fr ;
+  grid-template-rows:1fr 6fr ;
+ 
+  grid-template-areas:"title title title " "c1r2 c2r2 c2r2 ";
+}
+
+
+
+#footer{ background-color: rgb(122, 108, 88);
+    grid-area: footer;
+}
+#courses-title{
+    background-color: rgb(154, 112, 56);
+    grid-area: title;
+
+}
