@@ -4,39 +4,88 @@
 }
 
 
-body{
-    text-align: center;
-}
+
 
 
 #main-page{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows:1fr 6fr 1fr ;
+    grid-template-rows:1fr 9fr 1fr ;
     grid-template-areas: "header header" "main main" "footer footer";
 
 }
-#header{ background-color: blanchedalmond;
+#header{ background-color: rgb(203, 201, 200);
 grid-area: header;
+align-items: start;
+padding: 10px;
+border: rgb(0, 0, 0) solid;
+
+
 }
-#main{ background-color: rgb(200, 173, 132);
+#main{ background-color: rgb(203, 201, 200);
     grid-area: main;
     display: grid;
-    text-align: center;
+    text-align: start;
   grid-template-columns:  1fr 1fr 1fr ;
   grid-template-rows:1fr 6fr ;
+  
  
   grid-template-areas:"title title title " "c1r2 c2r2 c2r2 ";
+  gap: 20px;
+ 
+  
 }
 
 
 
-#footer{ background-color: rgb(122, 108, 88);
+#footer{ 
+    padding: 20px;
+    
+    background-color: rgb(203, 201, 200);
     grid-area: footer;
+border: rgb(0, 0, 0) solid;
+
+
 }
 #courses-title{
-    background-color: rgb(154, 112, 56);
+    background-color: rgb(255, 255, 255);
     grid-area: title;
+align-items: start;
+padding: 20px;
+
+
+}
+#detailed-page{
+     
+    display: grid;
+    
+    grid-template-rows: 3fr 3fr 3fr  ;
+     grid-template-columns:  1fr  ;
+    width: 100vw;
+padding: 10px;
+}
+
+#lesson-page{
+     
+    display: grid;
+    
+    grid-template-rows: 1fr 4fr   ;
+     grid-template-columns:  1fr  ;
+    width: 100vw;
+padding: 10px;
+}
+
+#title-main{
+    display: inline;
+}
+
+#search-bar{
+   float: right;
+   padding: 7px;
+}
+#search-button{
+    width:30px;
+   height: 20px;
 
 }
