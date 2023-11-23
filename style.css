@@ -54,16 +54,19 @@ border: rgb(0, 0, 0) solid;
 align-items: start;
 padding: 20px;
 
-
 }
 #detailed-page{
      
     display: grid;
     
-    grid-template-rows: 3fr 3fr 3fr  ;
+    grid-template-rows: 2fr 3fr 3fr  ;
      grid-template-columns:  1fr  ;
-    width: 100vw;
+    width: 96%;
+
 padding: 10px;
+grid-area: main;
+height: 100vh;
+
 }
 
 #lesson-page{
