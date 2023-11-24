@@ -122,7 +122,7 @@ time:"51 minutes",
         id: 3,
         department: "IT",
     Name: "JavaScript ES6 / ES2015 Tutorials",
-time:"1hour20minutes",
+time:"1 hour 20 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
         imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
@@ -213,7 +213,8 @@ const mainPageDiv = $("#main-page")
 
 const detailedPage = $("#detailed-page")
 const lessonPage=$("#lesson-page")
-
+const inputSearch=$("#Search")
+const searchButton=$("#search-button")
 lessonPage.hide()
 detailedPage.hide()
   courses.forEach((ele,i)=>{
@@ -230,7 +231,21 @@ detailedPage.hide()
     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
   </svg></button>`)
     
-     
+  const searchResult=()=>{
+    for (let index = 0; index < inputSearch.val().length; index++) {
+     console.log( ele.Name.includes((inputSearch.val())));
+
+      if (ele.Name.includes((inputSearch.val()))|| (ele.Name.toUpperCase()).includes((inputSearch.val().toUpperCase()))||(ele.Name.toLowerCase()).includes((inputSearch.val().toLowerCase()))) {
+       renderDiv.show()
+      }else{
+       renderDiv.hide()
+
+      }
+      
+    }
+    
+  }
+  searchButton.on("click",searchResult)
         renderDiv.appendTo(mainDiv)
 
         img.appendTo(renderDiv)
@@ -240,11 +255,19 @@ detailedPage.hide()
         time.appendTo(renderDiv)
     description.appendTo(renderDiv)
     favButton.on("click",()=>{
-      favArray.push(ele)
+        if ( !favArray.includes(ele)) {
+          favArray.push(ele)
       console.log(favArray);
       favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
       <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
     </svg>`)
+        }else{
+          favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg>`)
+    favArray.splice(favArray.indexOf(ele),1)
+        }
+        
     })
     renderDiv.css({
       "padding": "5px",
@@ -360,6 +383,7 @@ favDiv.hide()
 
 
  const loopFavArray=()=>{
+  favDiv.html("")
   favArray.forEach((ele4,i)=>{
  
     const renderDiv2 = $(`<div id="render-div${i}"></div>`)
@@ -372,16 +396,24 @@ favDiv.hide()
       
       const time = $(`<p id="time">Time:${ele4.time}</p>`)
       
+      const deleteButton = $(` <button id="Fav-Button${i}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+      <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+    </svg></button>`)
       
-       
-   
+   deleteButton.on("click",()=>{
+    favArray.splice(i,1)
+    loopFavArray()
+   })
   
           img2.appendTo(renderDiv2)
           Name2.appendTo(renderDiv2)
+          deleteButton.appendTo(renderDiv2)
          
           department2.appendTo(renderDiv2)
           time.appendTo(renderDiv2)
       description2.appendTo(renderDiv2)
+     
+      
       renderDiv2.css({
         "padding": "5px",
        })
@@ -413,7 +445,17 @@ favDiv.hide()
               "padding": "5px",
               "margin":"5px"
             }); 
-           
+            deleteButton.css({
+              "border":"solid grey",
+              "border-width": "thin",
+              "padding": "5px",
+              "margin":"5px",
+              "float": "right",
+              "margin-right":"9px",
+              "background-color":" transparent",
+             " box-shadow": "5px 10px #888888",
+            }); 
+          
   })
  }
 

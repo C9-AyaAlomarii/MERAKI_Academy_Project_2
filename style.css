@@ -127,3 +127,15 @@ padding: 10px;
     #fav-title{
         grid-area: title2;
     }
+
+
+   #search-button{
+        border:none grey;
+        border-width: thin;
+        padding: 5px;
+        margin:5px;
+        float: right;
+        margin-right:9px;
+        background-color:transparent;
+       box-shadow: none#888888;
+    }
