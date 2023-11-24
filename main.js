@@ -207,14 +207,8 @@ const mainDiv = $("#main")
 /*  const boxDiv = $(`<div id="box-div"></div>`)
 boxDiv.appendTo(mainDiv)  */
 
-/* boxDiv.css({
-  
-  "display": "grid",
-  'grid-template-columns': " 1fr 1fr 1fr",
-  "grid-template-rows":"100%  ",
- " grid-template-areas":"c1r1 c2r1 c2r1 "
+const favArray=[]
 
-});  */
 const mainPageDiv = $("#main-page")
 
 const detailedPage = $("#detailed-page")
@@ -230,14 +224,28 @@ detailedPage.hide()
         const Name = $(`  <h3 id="name">${ele.Name}</h3>`)
         const department = $(`<p id="department">${ele.department}</p>`)
     const description = $(`<p id="description">${ele.description}</p>`)
+/* */
+    const time = $(`<p id="time">Time:${ele.time}</p>`)
+    const favButton = $(` <button id="Fav-Button${i}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+  </svg></button>`)
     
      
         renderDiv.appendTo(mainDiv)
 
         img.appendTo(renderDiv)
         Name.appendTo(renderDiv)
+        favButton.appendTo(renderDiv)
         department.appendTo(renderDiv)
+        time.appendTo(renderDiv)
     description.appendTo(renderDiv)
+    favButton.on("click",()=>{
+      favArray.push(ele)
+      console.log(favArray);
+      favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+    </svg>`)
+    })
     renderDiv.css({
       "padding": "5px",
      })
@@ -264,7 +272,22 @@ detailedPage.hide()
             "padding": "5px",
             "margin":"10px",
            })
-          renderDiv.on("click",()=>{
+           time.css({
+            
+            "padding": "5px",
+            "margin":"5px"
+          }); 
+          favButton.css({
+            "border":"solid grey",
+            "border-width": "thin",
+            "padding": "5px",
+            "margin":"5px",
+            "float": "right",
+            "margin-right":"9px",
+            "background-color":" transparent",
+           " box-shadow": "5px 10px #888888",
+          }); 
+          img.on("click",()=>{
             
             mainDiv.hide()
             detailedPage.show()
@@ -329,4 +352,80 @@ detailedPage.hide()
           })
 
   })
+
+const favTab=$("#Favorite")
+const favDiv=$("#Fav-page")
+favDiv.hide()
+
+
+
+ const loopFavArray=()=>{
+  favArray.forEach((ele4,i)=>{
+ 
+    const renderDiv2 = $(`<div id="render-div${i}"></div>`)
+    renderDiv2.appendTo(favDiv)
+      const img2 = $(`<img src=${ele4.imageSrc} alt="" >`)
+      const lessonsDiv2=$("#lessons")
+          const Name2 = $(`  <h3 id="name">${ele4.Name}</h3>`)
+          const department2 = $(`<p id="department">${ele4.department}</p>`)
+      const description2 = $(`<p id="description">${ele4.description}</p>`)
+      
+      const time = $(`<p id="time">Time:${ele4.time}</p>`)
+      
+      
+       
+   
+  
+          img2.appendTo(renderDiv2)
+          Name2.appendTo(renderDiv2)
+         
+          department2.appendTo(renderDiv2)
+          time.appendTo(renderDiv2)
+      description2.appendTo(renderDiv2)
+      renderDiv2.css({
+        "padding": "5px",
+       })
+           img2.css({
+              "height": "50%",
+              "width": "90%",
+              "padding": "5px",
+              "margin":"10px",
+              "border-radius": "25px",
+            }); 
+            Name2.css({
+              
+              "padding": "5px",
+              "margin":"5px"
+            }); 
+            description2.css({
+              "text-align": "justify",
+   " text-justify": "inter-word",
+              "padding": "5px",
+              "margin":"5px"
+            }); 
+  
+            department2.css({
+              "padding": "5px",
+              "margin":"10px",
+             })
+             time.css({
+              
+              "padding": "5px",
+              "margin":"5px"
+            }); 
+           
+  })
+ }
+
+
+
+const goToFavList=()=>{
+  console.log(1);
+mainDiv.hide()
+favDiv.show()
+
+ }
+
+favTab.on("click",goToFavList)
+favTab.on("click",loopFavArray)
 
