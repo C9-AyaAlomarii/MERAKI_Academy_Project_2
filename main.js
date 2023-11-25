@@ -206,9 +206,14 @@ time:"1 hour 20 minutes",
 const mainDiv = $("#main")
 /*  const boxDiv = $(`<div id="box-div"></div>`)
 boxDiv.appendTo(mainDiv)  */
+let favArray
 
-const favArray=[]
-
+if(localStorage.getItem("FavArray")){
+  favArray=JSON.parse(localStorage.getItem("FavArray"))
+}else{
+  favArray=[]
+}
+console.log(favArray);
 const mainPageDiv = $("#main-page")
 
 const detailedPage = $("#detailed-page")
@@ -227,10 +232,49 @@ detailedPage.hide()
     const description = $(`<p id="description">${ele.description}</p>`)
 /* */
     const time = $(`<p id="time">Time:${ele.time}</p>`)
+    let result=favArray.find((E,I)=>
+{
+  return E.id===ele.id
+})
+console.log(result);
+       
     const favButton = $(` <button id="Fav-Button${i}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
   </svg></button>`)
-    
+  if (result) {
+         
+    console.log("uou utem in cat ");
+    favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+  </svg>`)
+  
+ 
+  }
+          
+    favButton.hover(()=>{
+     
+      favButton.css({
+        "background-color":"rgba(130, 124, 124, 0.244)",
+       " border-width": "thin",
+       " box-shadow": " 3px #888888",
+       "cursor": "pointer",
+
+
+      })
+    },()=>{
+      favButton.css({
+        "border":"solid grey",
+        "border-width": "thin",
+        "padding": "5px",
+        "margin":"5px",
+        "float": "right",
+        "margin-right":"9px",
+        "background-color":" transparent",
+       " box-shadow": "5px 10px #888888",
+      });
+
+    }
+    )
   const searchResult=()=>{
     for (let index = 0; index < inputSearch.val().length; index++) {
      console.log( ele.Name.includes((inputSearch.val())));
@@ -245,6 +289,30 @@ detailedPage.hide()
     }
     
   }
+  searchButton.hover(()=>{
+     
+    searchButton.css({
+      "background-color":"rgba(130, 124, 124, 0.244)",
+     " border-width": "thin",
+     " box-shadow": " 3px #888888",
+     "cursor": "pointer",
+
+
+    })
+  },()=>{
+    searchButton.css({
+      "border":"solid grey",
+      "border-width": "thin",
+      "padding": "5px",
+      "margin":"5px",
+      "float": "right",
+      "margin-right":"9px",
+      "background-color":" transparent",
+     " box-shadow": "5px 10px #888888",
+    });
+
+  }
+  )
   searchButton.on("click",searchResult)
         renderDiv.appendTo(mainDiv)
 
@@ -255,17 +323,39 @@ detailedPage.hide()
         time.appendTo(renderDiv)
     description.appendTo(renderDiv)
     favButton.on("click",()=>{
-        if ( !favArray.includes(ele)) {
+     
+      console.log(typeof(favArray));
+      console.log(favArray);
+let result=favArray.find((E,I)=>
+{
+  return E.id===ele.id
+})
+console.log(result);
+        if (!result) {
           favArray.push(ele)
+          console.log(ele);
       console.log(favArray);
       favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
       <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
     </svg>`)
+    let favArrayToString= JSON.stringify(favArray)
+    // console.log((favButton.html()));
+    
+    localStorage.setItem("FavArray",favArrayToString)
+
         }else{
-          favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+          console.log(favArray);
+          console.log("uou utem in cat ");
+          favButton.html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
         </svg>`)
-    favArray.splice(favArray.indexOf(ele),1)
+        
+        favArray.splice(favArray.indexOf(ele),1)
+        //let favArrayToString2= JSON.stringify(favArray)
+    //localStorage.setItem("FavArray",favArrayToString2)
+    
+
+    
         }
         
     })
@@ -310,6 +400,30 @@ detailedPage.hide()
             "background-color":" transparent",
            " box-shadow": "5px 10px #888888",
           }); 
+          img.hover(()=>{
+     
+            img.css({
+              "height": "50%",
+              "width": "90%",
+              "transform":" scale(1,1.2)",
+             
+             "cursor": "pointer",
+          
+          
+            })
+          },()=>{
+            img.css({
+              "transform":"none",
+
+              "height": "50%",
+            "width": "90%",
+            "padding": "5px",
+            "margin":"10px",
+            "border-radius": "25px",
+            });
+          
+          }
+          )
           img.on("click",()=>{
             
             mainDiv.hide()
@@ -377,6 +491,28 @@ detailedPage.hide()
   })
 
 const favTab=$("#Favorite")
+favTab.hover(()=>{
+     
+  favTab.css({
+    "border-bottom":"solid  grey",
+   " border-width": "thin",
+   " box-shadow": " none none 3px none #888888",
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  favTab.css({
+    "display": "block",
+    "border-bottom":"none",
+
+    "margin-right":" 30px",
+    "background-color":"transparent",
+    " box-shadow": " none #888888",
+  });
+
+}
+)
 const favDiv=$("#Fav-page")
 favDiv.hide()
 
@@ -402,6 +538,8 @@ favDiv.hide()
       
    deleteButton.on("click",()=>{
     favArray.splice(i,1)
+    let favArrayToStringDelete=JSON.stringify(favArray)
+    localStorage.setItem("FavArray",favArrayToStringDelete)
     loopFavArray()
    })
   
@@ -465,7 +603,7 @@ const goToFavList=()=>{
   console.log(1);
 mainDiv.hide()
 favDiv.show()
-
+loopFavArray()
  }
 
 favTab.on("click",goToFavList)
