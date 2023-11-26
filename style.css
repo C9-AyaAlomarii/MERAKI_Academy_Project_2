@@ -27,12 +27,12 @@ border: rgb(0, 0, 0) solid;
     grid-area: main;
     display: grid;
     text-align: start;
-  grid-template-columns:  1fr 1fr 1fr ;
-  grid-template-rows:0.1fr 8fr;
+  grid-template-columns:  1fr 1fr 1fr  ;
+  grid-template-rows:0.1fr 9fr ;
   
  
   grid-template-areas:"title title title " "c1r2 c2r2 c2r2 ";
-  gap: 20px;
+  gap: 15px;
   height: 100%;
   
 }
@@ -48,37 +48,83 @@ border: rgb(0, 0, 0) solid;
 
 
 }
-#courses-title{
-    background-color: rgb(255, 255, 255);
+#department{
     grid-area: title;
+         gap: 3px;
+    display: grid;
+    
+    grid-template-rows: 1fr  ;
+     grid-template-columns:  1fr 1fr 1fr ;
+     grid-template-areas: "c1r1 c2r1 c3r1";
+}
+#All-courses{
+    background-color: rgba(255, 255, 255, 0);
+    grid-area:c1r1;
+  
 align-items: start;
 padding: 20px;
+display: inline;
 
 }
+#It-Dep{
+    background-color: rgba(255, 255, 255, 0);
+    grid-area:c2r1;
+  
+align-items: start;
+padding: 20px;
+display: inline;
+}
+#Second-Dep{
+    background-color: rgba(255, 255, 255, 0);
+    grid-area:c3r1;
+  
+align-items: start;
+padding: 20px;
+display: inline;
+}
+
+
 #detailed-page{
      
     display: grid;
     
-    grid-template-rows: 2fr 3fr 3fr  ;
+    grid-template-rows: 0.5fr 1fr 2fr  ;
      grid-template-columns:  1fr  ;
     width: 96%;
-
+gap: 3px;
 padding: 10px;
 grid-area: main;
-height: 100vh;
+height: 100%;
 
 }
 
+#lessons{
+    display: grid;
+    grid-template-rows: 35px 170px 170px;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-areas:"lessons lessons lessons" "c1r2 c2r2 c3r2" "c1r3 c2r3 c3r3" ;
+    align-items: center
+}
+#lessonTitle{
+    padding:5px;
+    margin:5px;
+    grid-area: lessons;
+   
+  }
 #lesson-page{
      
     display: grid;
     
-    grid-template-rows: 1fr 4fr   ;
+    grid-template-rows: 35px 1fr 4fr   ;
      grid-template-columns:  1fr  ;
-    width: 100vw;
+    width: 90vw;
 padding: 10px;
-}
+grid-template-areas:"c1r1b" "c1r2" "c1r3" ;
 
+}
+#title-text{
+    grid-area: c1r1b;
+}
 #title-main{
     display: inline;
 }
@@ -139,4 +185,15 @@ padding: 10px;
         background-color:transparent;
        box-shadow: none#888888;
        cursor: pointer;
+    }
+    #lessons{
+        max-height: max-content;
+min-height: min-content;
+    }
+    #description-2{
+        height: fit-content;
+    }
+    #video{
+        align-content: center;
+        justify-self: center;
     }
