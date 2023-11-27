@@ -566,6 +566,87 @@ console.log(result);
 
     }
     )
+    const itDepartment=$("#It-Dep")
+    const careerDepartment=$("#Career-Dep")
+    const allCourses=$("#All-courses")
+allCourses.css({
+  
+  " border-width": "thin",
+  "background-color":"rgba(130, 124, 124, 0.244)"
+})
+const showItDepFun=()=>{
+  if(ele.department==="IT"){
+console.log("t");
+    renderDiv.show()
+  }else{
+   renderDiv.hide()
+
+  }
+  allCourses.css({
+  
+    
+    "background-color":"transparent"
+  })
+  careerDepartment.css({
+  
+    
+    "background-color":"transparent"
+  })
+  itDepartment.css({
+  
+    " border-width": "thin",
+    "background-color":"rgba(130, 124, 124, 0.244)"
+  })
+}
+
+itDepartment.on("click",showItDepFun)
+const showCareerDepFun=()=>{
+  if(ele.department==="Career Development"){
+console.log("t");
+    renderDiv.show()
+  }else{
+   renderDiv.hide()
+
+  }
+  allCourses.css({
+  
+    
+    "background-color":"transparent"
+  })
+  itDepartment.css({
+  
+    
+    "background-color":"transparent"
+  })
+  careerDepartment.css({
+  
+    " border-width": "thin",
+    "background-color":"rgba(130, 124, 124, 0.244)"
+  })
+}
+careerDepartment.on("click",showCareerDepFun)
+const showAllFun=()=>{
+  
+    renderDiv.show()
+    itDepartment.css({
+  
+    
+      "background-color":"transparent"
+    })
+    careerDepartment.css({
+    
+      
+      "background-color":"transparent"
+    })
+    allCourses.css({
+    
+      " border-width": "thin",
+      "background-color":"rgba(130, 124, 124, 0.244)"
+    })
+ 
+}
+allCourses.on("click",showAllFun)
+
   const searchResult=()=>{
     for (let index = 0; index < inputSearch.val().length; index++) {
      console.log( ele.Name.includes((inputSearch.val())));
@@ -864,7 +945,7 @@ favDiv.hide()
     const renderDiv2 = $(`<div id="render-div${i}"></div>`)
     renderDiv2.appendTo(favDiv)
       const img2 = $(`<img src=${ele4.imageSrc} alt="" >`)
-      const lessonsDiv2=$("#lessons")
+    
           const Name2 = $(`  <h3 id="name">${ele4.Name}</h3>`)
           const department2 = $(`<p id="department">${ele4.department}</p>`)
       const description2 = $(`<p id="description">${ele4.description}</p>`)
@@ -948,3 +1029,72 @@ loopFavArray()
 favTab.on("click",goToFavList)
 favTab.on("click",loopFavArray)
 
+const booksPageAPI=$("#Books-page")
+const booksTitle=$("#Books")
+
+booksPageAPI.hide();
+
+const ajaxFun=()=>{
+  $.ajax({
+    url:"https://api.itbook.store/1.0/new",
+    success:(data)=>{
+      renderBooksAPIfun(data.books)
+  console.log(data.books);
+    },
+   
+    error:(err)=>{
+      console.log(err);
+  
+    }
+  })
+}
+
+const renderBooksAPIfun=(data)=>{
+ 
+  booksPageAPI.show();
+  mainDiv.hide();
+  data.forEach((element,indx)=>{
+const renderBooksDiv=$(`<div id="Books-${indx}"></div>`)
+renderBooksDiv.appendTo(booksPageAPI)
+const image=$(`<img src="${element.image}" alt="${element.title}"></img>`)
+image.appendTo(renderBooksDiv)
+const title=$(`<h4 id="title-${indx}">Title: ${element.title}</h4>`)
+title.appendTo(renderBooksDiv)
+const subTitle=$(`<h5 id="subtitle-${indx}">subTitle: ${element.subtitle}</h5>`)
+subTitle.appendTo(renderBooksDiv)
+
+
+title.css({
+  "margin": "5px",
+"padding": '5px',
+})
+subTitle.css({
+  "margin": "5px",
+"padding": '5px',
+})
+
+  })
+
+}
+booksTitle.on("click", ajaxFun)
+booksTitle.hover(()=>{
+     
+  booksTitle.css({
+    "border-bottom":"solid  grey",
+   " border-width": "thin",
+   " box-shadow": " none none 3px none #888888",
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  booksTitle.css({
+    "display": "block",
+    "border-bottom":"none",
+
+    "margin-right":" 30px",
+    "background-color":"transparent",
+    " box-shadow": " none #888888",
+  });
+
+})
