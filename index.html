@@ -9,12 +9,14 @@
     <title>MentorVerse</title>
 </head>
 <body>
-    <div>
+    <div id="all-page">
     <div id="main-page">
 <div id="header">
-    <h2 id="title-main">MentorVerse</h2>
+    <h2 id="title-main"><img id="title-main" src="https://i.imgur.com/MCevrCT.png?1" alt=""></h2>
     
     <div id="search-bar"> 
+        <h3 id="Sign-in">Sign in</h3>
+
         <h3 id="Books">Library </h3>
         <h3 id="Favorite">Favorite List</h3>
         <input id="Search" type="text" placeholder="Search..">
@@ -53,7 +55,45 @@
  <h3 id="fav-title">Favorite List</h3>   
 </div>
 <div id="Books-page"></div>
-    <div id="footer">footer</div>
+<div id="SignIn-page">
+    <div id="signIn-Section">
+        
+        <div id="information-signIn">
+        
+       
+        <input id="username" type="text" placeholder="Email or phone number">
+       
+        <input id="password" type="password" placeholder="Password"><br>
+        <button id="SignIn-button">Sign In</button>
+    </div>
+    <div id="flex-line"></div>
+    <div id=Start-signUp1>
+        <h3 id="Signing-sen">or <br>Don't Have an Account </h3>
+        <button id="Start-signUp">Create new account</button>
+    </div>
+    
+    </div>
+   <div id="logo-login">
+    <div>
+        <img id="logo-img" src="https://i.imgur.com/MCevrCT.png?1" alt="">
+    <h3 id="Signing-sen">Already part of our learning galaxy? Reconnect with your account and continue your stellar journey through MentorVerse!</h3>
+    
+</div>
+</div>
+</div>
+<div id="SignUp-page">
+    <h2>Please fill out your account information. </h2>
+    <button id="Start-signUp">Sign Up</button>
+</div>
+    <div id="footer">
+        <div id="copyright" text-align="center">&copy; 2023 - 2023 www.MentorVerse.com</div>
+<script>
+(function(){
+	let cpr = document.getElementById("copyright");
+	cpr.innerHTML = "&copy; 2023 - "+new Date().getFullYear()+" www.MentorVerse.com - All Rights Reserved.";
+})();
+</script>
+    </div>
    
 </div>
 </div>

@@ -5,7 +5,7 @@ const courses = [
   Name: "jQuery for Beginners ",
 time:"2 hours",
       goals: ["Event Binding Proficiency: Master efficient handling of user interactions.", "Code Efficiency: Write smarter, cleaner jQuery for better performance.", "AJAX & API Integration: Fetch and use external data seamlessly.", "Dynamic Panel Creation: Build resizable jQuery panels.", "Backend Data Posting: Post data to backend servers easily.","Image Slider Development: Create dynamic image sliders.", ],
-      imageSrc: "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?w=900&t=st=1700502277~exp=1700502877~hmac=07b2f74aace77245d2df2ae02affc2a221eadad0ef5f4ceaf87332f5aa3c1eff",
+      imageSrc: "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149379660.jpg?w=996&t=st=1701117370~exp=1701117970~hmac=c0fb46638ccd8eb9826a619d95ae6e9206c01fc258fb659d8b53fd8fd152674e",
   
       description: "Mastering jQuery: Simplifying Web Development for Beginners.",
       detailedDescription:`This jQuery Tutorial for beginners will help you get jQuery on your page and get up-to-speed with how to use basic jQuery commands.What is jQuery? As you'll see in this tutorial, even beginners to javascript can write jQuery within minutes. It's also the most universally used javascript library in the world at present, so odds are your next employer will be using it..`,
@@ -81,7 +81,7 @@ time:"2 hours",
 time:"51 minutes",
 
         goals: ["Grasp ML basics with JavaScript.", "Learn to use JavaScript for basic ML tasks", "Code simple ML algorithms using JavaScript.", "Create a recommendation engine using JavaScript in a web browser.", "Create basic neural network models.", "Learn about different activation functions used in networks.", "Understand practical applications of neural networks.", "Build neural networks using TensorFlow JS.", " Practice training and evaluating models with TensorFlow JS."],
-        imageSrc: "https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-97395.jpg?w=900&t=st=1700502340~exp=1700502940~hmac=401563a0ba61e48375ca08328ced36d4c6cede23a92615744bb5e975b5fd7779",
+        imageSrc: "https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=996&t=st=1701117535~exp=1701118135~hmac=62e68651d3729d6ae852b1144ff518d4b1c2580c919a234de2b69e09b3255299",
     
     description: "In a few lines of code, we can tackle real browser or server challenges with machine learning and neural networks! ,",
     detailedDescription:"Machine learning is a fun new(er) way to solve problems.Rather than programming an algorithm for answering a question about our data, we instead can train a (neural network) with a set of training data.  Once we have a trained network, we can use it to predict outcomes.",
@@ -125,7 +125,7 @@ time:"51 minutes",
 time:"1 hour 20 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
-        imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
+        imageSrc: "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg?w=996&t=st=1701117667~exp=1701118267~hmac=704e75f05a3d155b37e9d0d1c92d6410c9f6f47cf2d81fe8e59c76ab58a40d3c",
     
     description: "This is an introduction to my ES6 / ES2015 mini-course. We will be discussing all of the new features of ES6",
     detailedDescription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eaque veritatis eos, earum laboriosam quia recusandae aperiam vel molestias illum quasi saepe vero odio, consequuntur minima excepturi nesciunt atque. Ipsum",
@@ -206,7 +206,7 @@ time:"1 hour 20 minutes",
 time:"16 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
-        imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
+        imageSrc: "https://img.freepik.com/free-vector/woman-spotlight-through-magnifier-glass_1262-21306.jpg?w=1060&t=st=1701118229~exp=1701118829~hmac=fa99df31ef26a731032c0171eedcb3b4e8536594f9a2a62c6701409ea98f0c5f",
     
     description: "Designing Your Career - From Stanford's 'Designing Your Life'",
     detailedDescription:"The Outsider Problem is what many people experience as they begin searching for new jobs or try to change industries. This video gives context to frame the two most powerful tools in designing your career: Networking and Informational Interviewing.",
@@ -256,7 +256,7 @@ time:"16 minutes",
 time:"57 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
-        imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
+        imageSrc: "https://img.freepik.com/free-vector/employer-candidate-talking-through-magnifying-glass_1262-21241.jpg?w=1060&t=st=1701117972~exp=1701118572~hmac=b60611e801d54210d45fbfe28e46316f9a8826c980df30a2829cf2a28c0914ba",
     
     description: "Watch The Job Search Seminar from Tony Beshara America’s #1 placement and recruitment specialist.",
     detailedDescription:"Discover Proven Job Search Strategies with Tony Beshara! Join America’s #1 Placement Expert in this Comprehensive Seminar Series. Gain invaluable insights, tips, and techniques for securing your dream job. Elevate your job search game with expert guidance and unlock career success today!",
@@ -318,7 +318,7 @@ time:"57 minutes",
 time:"1 hour 37 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
-        imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
+        imageSrc: "https://img.freepik.com/free-vector/job-interview-conversation_74855-7566.jpg?w=1060&t=st=1701118611~exp=1701119211~hmac=a8ee910c97bf8805ae6d73b250efe9cfb97e5f698ea18c04655398cbbeecd042",
     
     description: "Prepare for Success: Essential Talks to Watch Before Your Job Interview - Gain invaluable insights and ace your interview with expert advice and inspirational talks",
     detailedDescription:"Get ahead in your career journey with our comprehensive course, 'Prep Talks: Essential Viewing Before Your Job Interview.' This meticulously curated selection of talks equips you with invaluable insights, strategies, and inspiration to excel in your upcoming job interviews. From expert advice on acing tough questions to motivational talks that boost your confidence, this course is your ultimate preparation toolkit. Dive into these talks and arm yourself with the knowledge and confidence needed to land that dream job",
@@ -374,7 +374,7 @@ time:"1 hour 37 minutes",
 time:"43 minutes",
 
         goals: [ "Understand the significance of ES6 in current JavaScript practices.", "Practice converting ES6 code into ES5 using Babel.", "Understand the use of 'let' and 'const' for variable declarations.", " Apply class concepts to create object-oriented structures.","Understand the syntax and advantages of template literals.", "Understand additional methods available for handling numeric values in ES6.", "Apply default parameters and the spread operator effectively in functions.", " Learn about ES6 data structures - Set, Map, WeakSet, and WeakMap.", " Understand the 'this' keyword handling in arrow functions.", "Learn when and how to use arrow functions effectively for clear and concise code."],
-        imageSrc: "https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?w=996&t=st=1700592621~exp=1700593221~hmac=76eec6c0bd1211f451e0c5dc69c283c77fd5fce45efdc7481c5418fd7c9f2585",
+        imageSrc: "https://img.freepik.com/free-vector/online-job-interview_23-2148644500.jpg?w=996&t=st=1701120089~exp=1701120689~hmac=fa4eec0cf3d85468271f5c0c1073739e943cfef7d6aa2b37cf53817c5247fb53",
     
     description: "انطلق في حياتك العملية مع | دورة السيرة الذاتية |  مع المستشار التدريبي : محمد إبراهيم",
     detailedDescription:`هل تريد الحصول علي وظيفة في الشركات الكبري ؟
@@ -494,6 +494,10 @@ time:"43 minutes",
   ];
   // for the `imageSrc` it can use an array of url/path
 const mainDiv = $("#main")
+const signInTab=$("#Sign-in")
+const signInPage=$("#SignIn-page")
+signInPage.hide()
+const logo=$("#title-main")
 /*  const boxDiv = $(`<div id="box-div"></div>`)
 boxDiv.appendTo(mainDiv)  */
 let favArray
@@ -571,8 +575,11 @@ console.log(result);
     const allCourses=$("#All-courses")
 allCourses.css({
   
+
+  "width":"fit-content",
+  "border-bottom":"solid  grey",
   " border-width": "thin",
-  "background-color":"rgba(130, 124, 124, 0.244)"
+  " box-shadow": " none none 3px none #888888",
 })
 const showItDepFun=()=>{
   if(ele.department==="IT"){
@@ -585,19 +592,72 @@ console.log("t");
   allCourses.css({
   
     
+    "border-bottom":"none",
+    
     "background-color":"transparent"
   })
   careerDepartment.css({
   
+    "border-bottom":"none",
     
     "background-color":"transparent"
   })
   itDepartment.css({
-  
+    "width":"fit-content",
+    "border-bottom":"solid  grey",
     " border-width": "thin",
-    "background-color":"rgba(130, 124, 124, 0.244)"
+    " box-shadow": " none none 3px none #888888",
+   
+    /* " border-width": "thin",
+    "background-color":"rgba(130, 124, 124, 0.244)" */
   })
 }
+allCourses.hover(()=>{
+     
+  allCourses.css({
+  
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  allCourses.css({
+    "cursor": "unset",
+  });
+
+}
+)
+
+itDepartment.hover(()=>{
+     
+  itDepartment.css({
+  
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  itDepartment.css({
+    "cursor": "unset",
+  });
+
+}
+)
+careerDepartment.hover(()=>{
+     
+  careerDepartment.css({
+  
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  careerDepartment.css({
+    "cursor": "unset",
+  });
+
+}
+)
 
 itDepartment.on("click",showItDepFun)
 const showCareerDepFun=()=>{
@@ -611,17 +671,21 @@ console.log("t");
   allCourses.css({
   
     
+    "border-bottom":"none",
+    
     "background-color":"transparent"
   })
   itDepartment.css({
-  
+    "border-bottom":"none",
     
     "background-color":"transparent"
   })
   careerDepartment.css({
   
+    "width":"fit-content",
+    "border-bottom":"solid  grey",
     " border-width": "thin",
-    "background-color":"rgba(130, 124, 124, 0.244)"
+    " box-shadow": " none none 3px none #888888",
   })
 }
 careerDepartment.on("click",showCareerDepFun)
@@ -631,17 +695,23 @@ const showAllFun=()=>{
     itDepartment.css({
   
     
+      "border-bottom":"none",
+    
       "background-color":"transparent"
     })
     careerDepartment.css({
     
       
+      "border-bottom":"none",
+    
       "background-color":"transparent"
     })
     allCourses.css({
     
+      "width":"fit-content",
+      "border-bottom":"solid  grey",
       " border-width": "thin",
-      "background-color":"rgba(130, 124, 124, 0.244)"
+      " box-shadow": " none none 3px none #888888",
     })
  
 }
@@ -773,6 +843,8 @@ console.log(result);
             "margin-right":"9px",
             "background-color":" transparent",
            " box-shadow": "5px 10px #888888",
+    "border-radius":"10px",
+
           }); 
           img.hover(()=>{
      
@@ -799,8 +871,14 @@ console.log(result);
           }
           )
           img.on("click",()=>{
-            
             mainDiv.hide()
+            signInPage.hide()
+            detailedPage.hide()
+           booksPageAPI.hide();
+            favDiv.hide()
+           
+            lessonPage.hide()
+           
             detailedPage.show()
            
             const detailedDescription =$("#description-2")
@@ -891,6 +969,11 @@ console.log(result);
                     }
                     )
                     lessonsItems.on("click",()=>{
+                      mainDiv.hide()
+                      signInPage.hide()
+                      detailedPage.hide()
+                     booksPageAPI.hide();
+                      favDiv.hide()
                       detailedPage.hide()
                       lessonPage.show()
                       const textTitleDiv=$("#title-text")
@@ -1012,6 +1095,8 @@ favDiv.hide()
               "margin-right":"9px",
               "background-color":" transparent",
              " box-shadow": "5px 10px #888888",
+    "border-radius":"10px",
+
             }); 
           
   })
@@ -1020,14 +1105,18 @@ favDiv.hide()
 
 
 const goToFavList=()=>{
-  console.log(1);
-mainDiv.hide()
+  
+  mainDiv.hide()
+signInPage.hide()
+detailedPage.hide()
+lessonPage.hide()
+  booksPageAPI.hide();
 favDiv.show()
 loopFavArray()
  }
 
 favTab.on("click",goToFavList)
-favTab.on("click",loopFavArray)
+//favTab.on("click",loopFavArray)
 
 const booksPageAPI=$("#Books-page")
 const booksTitle=$("#Books")
@@ -1035,6 +1124,12 @@ const booksTitle=$("#Books")
 booksPageAPI.hide();
 
 const ajaxFun=()=>{
+  mainDiv.hide()
+signInPage.show()
+detailedPage.hide()
+lessonPage.hide()
+  booksPageAPI.show();
+favDiv.hide()
   $.ajax({
     url:"https://api.itbook.store/1.0/new",
     success:(data)=>{
@@ -1050,9 +1145,13 @@ const ajaxFun=()=>{
 }
 
 const renderBooksAPIfun=(data)=>{
- 
+  mainDiv.hide()
+  favDiv.hide()
+signInPage.hide()
+detailedPage.hide()
+lessonPage.hide()
   booksPageAPI.show();
-  mainDiv.hide();
+  
   data.forEach((element,indx)=>{
 const renderBooksDiv=$(`<div id="Books-${indx}"></div>`)
 renderBooksDiv.appendTo(booksPageAPI)
@@ -1077,6 +1176,9 @@ subTitle.css({
 
 }
 booksTitle.on("click", ajaxFun)
+
+
+
 booksTitle.hover(()=>{
      
   booksTitle.css({
@@ -1098,3 +1200,50 @@ booksTitle.hover(()=>{
   });
 
 })
+
+
+const signInPageShow =()=>{
+  mainDiv.hide()
+  favDiv.hide()
+  booksPageAPI.hide()
+signInPage.show()
+detailedPage.hide()
+lessonPage.hide()
+
+}
+signInTab.on("click",signInPageShow)
+const signUpPage=$("#SignUp-page")
+signUpPage.hide()
+
+const returnToMain= ()=>{
+  mainDiv.show()
+  favDiv.hide()
+  booksPageAPI.hide()
+signInPage.hide()
+detailedPage.hide()
+lessonPage.hide()
+}
+
+logo.on("click",returnToMain)
+signInTab.hover(()=>{
+     
+  signInTab.css({
+    "border-bottom":"solid  grey",
+   " border-width": "thin",
+   " box-shadow": " none none 3px none #888888",
+   "cursor": "pointer",
+
+
+  })
+},()=>{
+  signInTab.css({
+    "display": "block",
+    "border-bottom":"none",
+
+    "margin-right":" 30px",
+    "background-color":"transparent",
+    " box-shadow": " none #888888",
+  });
+
+}
+)

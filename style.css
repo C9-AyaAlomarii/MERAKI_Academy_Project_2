@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+   color: #FAFAFA; 
+   font-family: "Segoe UI",Arial,sans-serif;
 }
 
 
@@ -9,21 +11,30 @@
 
 #main-page{
     height: 100vh;
+  /*   background-image:linear-gradient(to top, #09203f 70%, #2f485b 100%); */
+  
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows:1fr 9fr 1fr ;
     grid-template-areas: "header header" "main main" "footer footer";
+ 
 
 }
-#header{ background-color: rgb(203, 201, 200);
+#header{
+ background-image:linear-gradient(to top,  #27364c 0%, #2B4254 100%);
+cursor: unset;
 grid-area: header;
 align-items: start;
 padding: 10px;
-border: rgb(0, 0, 0) solid;
+border-bottom: rgba(62, 66, 68, 0.684) solid ;
+border-width: thin;
+
 
 
 }
-#main{ background-color: rgb(203, 201, 200);
+#main{ 
+ background-image:linear-gradient(to top,#2B4254 0%, #27364c  100%);
+   
     grid-area: main;
     display: grid;
     text-align: start;
@@ -40,11 +51,14 @@ border: rgb(0, 0, 0) solid;
 
 
 #footer{ 
+    background-image:linear-gradient(to top, #27364c  0%, rgb(52, 73, 88) 100%);
+
     padding: 20px;
     
-    background-color: rgb(203, 201, 200);
+   
     grid-area: footer;
-border: rgb(0, 0, 0) solid;
+border: rgb(56, 60, 62)  solid  none none none;
+text-align: center;
 
 
 }
@@ -87,10 +101,11 @@ display: inline;
 #detailed-page{
      
     display: grid;
-    
+    background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
+
     grid-template-rows: 0.5fr 1fr 2fr  ;
      grid-template-columns:  1fr  ;
-    width: 96%;
+    width: 1268.8 px;
 gap: 3px;
 padding: 10px;
 grid-area: main;
@@ -114,12 +129,14 @@ height: 100%;
 #lesson-page{
      
     display: grid;
+    background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
     
     grid-template-rows: 35px 1fr 4fr   ;
      grid-template-columns:  1fr  ;
-    width: 90vw;
 padding: 10px;
-grid-template-areas:"c1r1b" "c1r2" "c1r3" ;
+grid-area: main;
+grid-template-areas:"c1r1b" "c1r2b" "c1r3b" ;
+width: 1264 px;
 
 }
 #title-text{
@@ -127,6 +144,8 @@ grid-template-areas:"c1r1b" "c1r2" "c1r3" ;
 }
 #title-main{
     display: inline;
+    width: 110px;
+    height: 37px;
 }
 
 #search-bar{
@@ -139,28 +158,34 @@ grid-template-areas:"c1r1b" "c1r2" "c1r3" ;
 #Search{
    align-self: center;
    padding: 4px;
+   border-radius:14px;
+
 }
 #search-button{
     width:30px;
    height: 20px;
 
 }
-#Fav-page{
+/* #Fav-page{
     display: grid;
-    
+grid-area: main;
+background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
+
     grid-template-rows: 1fr 4fr   ;
      grid-template-columns:  1fr  ;
     width: 100vw;
     height: 100vh;
 padding: 10px;
-}
+} */
 #Favorite{
     display: block;
     margin-right: 30px;
     }
 
 
-    #Fav-page{ background-color: rgb(203, 201, 200);
+    #Fav-page{
+        background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
+        
         grid-area: main;
         display: grid;
         text-align: start;
@@ -208,6 +233,9 @@ min-height: min-content;
     margin-right: 30px;
     }
     #Books-page{
+        grid-area: main;
+background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
+
         display: grid;
         grid-template-columns:  repeat(4,1fr);
        grid-template-rows:repeat(5,1fr); 
@@ -218,6 +246,133 @@ min-height: min-content;
        
       align-items: center;
       text-align: start;
-       margin: 10px;
+     
 
     }
+    #Sign-in{
+        display: block;
+        margin-right: 30px;
+    align-items: center;
+
+    }
+    #SignIn-page{
+        grid-area: main;
+background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
+
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        grid-template-rows: 1fr ;
+       
+
+      height: 100%;
+      width: 100%;
+     
+      
+     
+       
+    
+      
+    }
+    #signIn-Section{
+        justify-content: center;
+        display: grid;
+       
+      align-content: center;
+      
+
+    }
+    #information-signIn{
+        text-align: center;
+        align-content: center;
+    }
+    #Signing-sen{
+        margin-bottom: 20px;
+        padding: 20px;
+        justify-self: center;
+        text-align: center;
+   font-size: large;
+
+    }
+
+
+
+
+ #password{
+    margin-bottom: 5px;
+    padding: 5px;
+  
+    height:37px ;
+    width: 330px;
+    border-radius:14px;
+    font-size: 17px;
+
+    justify-self: start;
+}
+#username{
+    margin-bottom: 5px;
+    padding: 5px;
+ margin: 15px;
+    height:37px ;
+    width: 330px;
+    justify-self: start;
+    border-radius:14px;
+   font-size: 17px;
+
+}
+#SignIn-button{
+    margin-bottom: 5px;
+    padding: 5px;
+    margin: 15px;
+
+    height:37px ;
+    width: 330px;
+    border-radius:14px;
+
+}
+#SignUp-Section{
+    display: block;
+    margin-bottom: 30px;
+
+}
+#Start-signUp{
+    
+margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius:14px;
+
+color: rgb(52, 73, 88);
+   font-style: bold;
+   font-size: 17px;
+    height:37px ;
+    width: 330px;
+   text-align: center;
+ 
+
+}
+#Start-signUp1{
+    text-align: center;
+}
+#flex-line{    border-bottom-color: rgb(47, 50, 52);
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px;
+    text-align: center;
+    
+    transform: scale(0.55,1);
+}
+#logo-login{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    text-align: center;
+
+}
+#logo-img{
+    height:110px ;
+    width: 340px;
+    text-align: center;
+    margin: 30px;
+}
