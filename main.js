@@ -498,6 +498,16 @@ const signInTab=$("#Sign-in")
 const signInPage=$("#SignIn-page")
 signInPage.hide()
 const logo=$("#title-main")
+
+const singInDiv = $("#signIn-Section")
+const signUpSec=$("#SignUp-page")
+const signUpPage=$("#SignUp-page")
+
+signInPage.hide()
+
+
+signUpPage.hide()
+const creatNewAccBtn = $("#Start-signUp")
 /*  const boxDiv = $(`<div id="box-div"></div>`)
 boxDiv.appendTo(mainDiv)  */
 let favArray
@@ -743,7 +753,7 @@ allCourses.on("click",showAllFun)
     })
   },()=>{
     searchButton.css({
-      "border":"solid grey",
+      "border":"none",
       "border-width": "thin",
       "padding": "5px",
       "margin":"5px",
@@ -1209,10 +1219,11 @@ const signInPageShow =()=>{
 signInPage.show()
 detailedPage.hide()
 lessonPage.hide()
+singInDiv.show()
 
+signUpSec.hide()
 }
 signInTab.on("click",signInPageShow)
-const signUpPage=$("#SignUp-page")
 signUpPage.hide()
 
 const returnToMain= ()=>{
@@ -1247,3 +1258,149 @@ signInTab.hover(()=>{
 
 }
 )
+
+const creatNewaccDiv=()=>{
+  mainDiv.hide()
+  favDiv.hide()
+  booksPageAPI.hide()
+detailedPage.hide()
+lessonPage.hide()
+singInDiv.hide()
+
+signUpSec.show()
+}
+
+creatNewAccBtn.on("click",creatNewaccDiv)
+
+const userFirstName=$("#First-in")
+const userLastName=$("#sec-in")
+const userUserName=$("#Username-in")
+const userPassword=$("#Username-in")
+
+const signUpbtn=$("#SignUp-btn")
+
+
+const usersInfoAccount=(JSON.parse(localStorage.getItem("UsersArray"))) || []
+console.log(usersInfoAccount);
+const missingMess=$("#wrong-mess")
+const saveUserInfo=()=>{
+  
+  console.log(  ( userFirstName.val()!=="" && userLastName.val()!=="" &&  userPassword.val() !==""))
+  if(( userFirstName.val()!=="" && userLastName.val()!=="" && userUserName.val()!=="" &&  userPassword.val() !=="")){
+console.log("done");
+missingMess.text("Account Created ,Welcome Abored")
+missingMess.css(
+  {
+"color": "green",
+    
+  }
+)
+usersInfoAccount.push({
+  firstname:userFirstName.val(),
+  lastname:userLastName.val(),
+  username:userUserName.val(),
+  password:userPassword.val(),
+
+})
+console.log(usersInfoAccount);
+let userArrayToString =JSON.stringify(usersInfoAccount)
+localStorage.setItem("UsersArray",userArrayToString)
+  }else{
+    console.log("wrong");
+missingMess.text("Fill Required ")
+missingMess.css(
+  {
+"color": "red",
+    
+  }
+)
+  }
+}
+
+signUpbtn.on("click",saveUserInfo)
+const usernameInSignIn=$("#username")
+const PassInSignIn=$("#password")
+const signInBtn=$("#SignIn-button")
+
+/* let checkfromArray= usersInfoAccount.find((elementF,indF)=>{
+
+ 
+  return (elementF.firstname===userLastName.val() && elementF.lastname )
+
+}) */
+const userNamebottomTxt=$("#right-wrongUser")
+const passBottomText=$("#right-wrongpass")
+
+const checkUserpass=()=>{
+
+
+  let resultPass= usersInfoAccount.find((E,I)=>
+{
+  return E.password===PassInSignIn.val()
+}) 
+
+    
+      if(resultPass){
+        passBottomText.text("✔✔")
+        passBottomText.css({
+     "color":"green",
+   })
+   console.log("correct pass");
+       }else{
+         passBottomText.text("Wrong Password")
+         passBottomText.css({
+     "color":"red",
+   })
+   return console.log("wrong pass");
+   
+       }
+
+
+
+
+
+
+}
+const checkUserName=()=>{
+  userNamebottomTxt.html=("")
+  passBottomText.html=("")
+  
+  let resultUser= usersInfoAccount.find((E,I)=>
+  {
+    return E.username===usernameInSignIn.val()
+  }) 
+
+
+
+if(resultUser){
+  userNamebottomTxt.text("✔✔")
+  userNamebottomTxt.css({
+    "color":"green",
+  })
+  checkUserpass()
+  return console.log("correct user");
+  
+      }else {
+        userNamebottomTxt.text("UserName Not Found")
+  userNamebottomTxt.css({
+    "color":"red",
+  })
+  console.log("not found  user");
+      }
+
+     
+
+
+
+
+
+}
+
+
+
+signInBtn.on("click",checkUserName)
+
+
+
+
+

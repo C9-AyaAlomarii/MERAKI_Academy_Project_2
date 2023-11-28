@@ -22,7 +22,6 @@
 }
 #header{
  background-image:linear-gradient(to top,  #27364c 0%, #2B4254 100%);
-cursor: unset;
 grid-area: header;
 align-items: start;
 padding: 10px;
@@ -266,11 +265,6 @@ background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
 
       height: 100%;
       width: 100%;
-     
-      
-     
-       
-    
       
     }
     #signIn-Section{
@@ -300,6 +294,7 @@ background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
  #password{
     margin-bottom: 5px;
     padding: 5px;
+    color: rgb(52, 73, 88);
   
     height:37px ;
     width: 330px;
@@ -309,6 +304,8 @@ background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
     justify-self: start;
 }
 #username{
+    color: rgb(52, 73, 88);
+
     margin-bottom: 5px;
     padding: 5px;
  margin: 15px;
@@ -317,12 +314,12 @@ background-image:linear-gradient(to top,rgb(52, 73, 88) 0%, #27364c  100%);
     justify-self: start;
     border-radius:14px;
    font-size: 17px;
-
 }
 #SignIn-button{
     margin-bottom: 5px;
     padding: 5px;
     margin: 15px;
+    color: rgb(52, 73, 88);
 
     height:37px ;
     width: 330px;
@@ -375,4 +372,63 @@ color: rgb(52, 73, 88);
     width: 340px;
     text-align: center;
     margin: 30px;
+}
+
+#SignUp-page{
+    justify-content: center;
+    display: grid;
+   
+  align-content: center;
+  
+  
+
+}
+#Gender-div{
+    justify-content: start;
+    text-align: start;
+    
+}
+#Birth-in{
+    color: #27364c;
+}
+
+.input-signup{
+    margin-bottom: 5px;
+    padding: 5px;
+    height:26px ;
+    width: 320px;
+    justify-self: start;
+    border-radius:14px;
+   font-size: 14px;
+   color: #27364c;
+
+
+}
+
+.gender-signup{
+    
+    padding: 5px;
+   
+    justify-self: start;
+    border-radius:14px;
+   font-size: 14px;
+
+}
+
+
+#SignUp-btn{
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius:14px;
+
+color: rgb(52, 73, 88);
+   font-style: bold;
+   font-size: 17px;
+    height:37px ;
+    width: 330px;
+   text-align: center;
+}
+#wrong-mess{
+color: red;
 }
