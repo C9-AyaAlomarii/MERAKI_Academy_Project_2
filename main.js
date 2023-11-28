@@ -1275,7 +1275,7 @@ creatNewAccBtn.on("click",creatNewaccDiv)
 const userFirstName=$("#First-in")
 const userLastName=$("#sec-in")
 const userUserName=$("#Username-in")
-const userPassword=$("#Username-in")
+const userPassword=$("#Password-in")
 
 const signUpbtn=$("#SignUp-btn")
 
